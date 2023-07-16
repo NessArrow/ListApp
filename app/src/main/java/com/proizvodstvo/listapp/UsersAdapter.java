@@ -25,8 +25,13 @@ public class UsersAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         // 1. преобразовать макет в дерево объектов java
         // самым базовым классом для всех элементов ui является класс View
-        View myView = inflater.inflate(R.layout.item, viewGroup, false);
 
+        // проверяю convertView, если он null, значит у меня нет повторного пункта для использования
+        // если не нулл, вместо inflate я беру готовый "старый" пункт списка
+
+        if (view == null) {
+            view = inflater.inflate(R.layout.item, viewGroup, false);
+        }
             /*
             процесс преобразования xml-макета в дерево объектов
             в Андроид называется inflation
@@ -36,9 +41,9 @@ public class UsersAdapter extends BaseAdapter {
 
         // 2. получить ссылки на UI-элементы в этом дереве
 
-        ImageView imageView = myView.findViewById(R.id.image);
-        TextView name = myView.findViewById(R.id.name_tv);
-        TextView number = myView.findViewById(R.id.number_tv);
+        ImageView imageView = view.findViewById(R.id.image);
+        TextView name = view.findViewById(R.id.name_tv);
+        TextView number = view.findViewById(R.id.number_tv);
 
         // 3. заполнить данными элементы UI
 
@@ -52,7 +57,7 @@ public class UsersAdapter extends BaseAdapter {
         // 4. возвращаем ссылку на корень дерева объектов Java
 
 
-        return myView;
+        return view;
     }
 
     @Override
