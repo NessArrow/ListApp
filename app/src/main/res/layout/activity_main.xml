@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/back_grey">
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="80dp"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:elevation="10dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/tv_add_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_del_btn"
+        android:text="Add"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/dark_blue"/>
+    <TextView
+        android:elevation="10dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/tv_del_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_add_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_clear_btn"
+        android:text="Delete"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="15sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/dark_blue"/>
+    <TextView
+        android:elevation="10dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/tv_clear_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_del_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Clear"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/dark_blue"/>
+
+
+    <Button
+        android:elevation="10dp"
+        android:id="@+id/add_btn"
+        app:layout_constraintLeft_toLeftOf="@id/tv_add_btn"
+        app:layout_constraintRight_toRightOf="@id/tv_add_btn"
+        app:layout_constraintBottom_toBottomOf="@id/tv_add_btn"
+        app:layout_constraintTop_toTopOf="@id/tv_add_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+    <Button
+        android:elevation="10dp"
+        android:id="@+id/del_btn"
+        app:layout_constraintLeft_toLeftOf="@id/tv_del_btn"
+        app:layout_constraintRight_toRightOf="@id/tv_del_btn"
+        app:layout_constraintBottom_toBottomOf="@id/tv_del_btn"
+        app:layout_constraintTop_toTopOf="@id/tv_del_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+    <Button
+        android:elevation="10dp"
+        android:id="@+id/clear_btn"
+        app:layout_constraintLeft_toLeftOf="@id/tv_clear_btn"
+        app:layout_constraintRight_toRightOf="@id/tv_clear_btn"
+        app:layout_constraintBottom_toBottomOf="@id/tv_clear_btn"
+        app:layout_constraintTop_toTopOf="@id/tv_clear_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+</androidx.constraintlayout.widget.ConstraintLayout>
